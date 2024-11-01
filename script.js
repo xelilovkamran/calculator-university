@@ -4,7 +4,10 @@ let currentInput = "";
 let history = "";
 
 function appendNumber(number) {
-  if (currentInput === "0" && number === "0") return;
+  // Prevent multiple points or points without a number
+  if (number === ".") {
+    if (currentInput === "" || currentInput.includes(".")) return;
+  }
   currentInput += number;
   resultDisplay.innerText = currentInput;
 }

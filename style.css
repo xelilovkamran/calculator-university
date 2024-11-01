@@ -64,10 +64,14 @@ button:nth-child(4n) {
   background-color: #4a4a4a;
 }
 
-button:nth-child(16) {
+button:nth-child(20) {
   background-color: #ff8c42;
 }
 
-button:nth-last-child(2) {
+button:nth-last-child(3) {
   background-color: #4a4a4a;
+}
+
+button:nth-child(5) {
+  /* background-color: #4a4a4a; */
 }
