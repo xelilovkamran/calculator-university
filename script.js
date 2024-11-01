@@ -4,7 +4,6 @@ let currentInput = "";
 let history = "";
 
 function appendNumber(number) {
-  // Prevent multiple points or points without a number
   if (number === ".") {
     if (currentInput === "" || currentInput.includes(".")) return;
   }
@@ -41,4 +40,10 @@ function calculateResult() {
 function deleteLast() {
   currentInput = currentInput.slice(0, -1);
   resultDisplay.innerText = currentInput || "0";
+}
+
+function toggleSign() {
+  if (currentInput === "") return;
+  currentInput = -currentInput + "";
+  resultDisplay.innerText = currentInput;
 }
